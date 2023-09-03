@@ -1,0 +1,1 @@
+export type TDirection = readonly [number, number, number, number];
