@@ -8,11 +8,9 @@ export default class Sprite {
 	}
 
 	public async load(): Promise<unknown> {
-		return new Promise((res, rej) => {
+		return new Promise((res) => {
 			this.image.src = this.src;
-			this.image.addEventListener('load', () =>
-				res(this),
-			);
+			this.image.addEventListener('load', () => res(this));
 		});
 	}
 }

@@ -1,7 +1,4 @@
-import {
-	DISPLAY_HEIGHT,
-	DISPLAY_WIDTH,
-} from '../types/constants';
+import { DISPLAY_HEIGHT, DISPLAY_WIDTH } from '../types/constants';
 import Sprite from './sprite';
 import Tank from './tank';
 import World from './world';
@@ -11,14 +8,8 @@ export default class View {
 	private context!: CanvasRenderingContext2D;
 	private sprite!: Sprite;
 
-	constructor(
-		canvas: HTMLCanvasElement | null,
-		sprite: Sprite,
-	) {
-		if (!canvas)
-			throw new Error(
-				'Не обнаружен объект canvas',
-			);
+	constructor(canvas: HTMLCanvasElement | null, sprite: Sprite) {
+		if (!canvas) throw new Error('Не обнаружен объект canvas');
 
 		this.canvas = canvas;
 		this.context = canvas.getContext('2d')!;
@@ -46,11 +37,6 @@ export default class View {
 	}
 
 	private clearScreen(): void {
-		this.context.clearRect(
-			0,
-			0,
-			this.canvas.width,
-			this.canvas.height,
-		);
+		this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 	}
 }

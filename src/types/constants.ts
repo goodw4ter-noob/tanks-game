@@ -1,3 +1,7 @@
+export const DEFAULT_X_POSITION = 100;
+export const DEFAULT_Y_POSITION = 100;
+export const INITIAL_FRAME_VALUE = 0;
+
 const DIRECTION_UP = [
 	[0 * 32, 0 * 32, 1 * 32, 1 * 32],
 	[1 * 32, 0 * 32, 1 * 32, 1 * 32],
